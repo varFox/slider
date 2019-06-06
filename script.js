@@ -21,8 +21,8 @@ const slider = (slide, pr, nt, sliderDots, dot) => {
     if (m < 1) {
       slideFocus = slides.length;
     }
-    dots.forEach((item) => item.classList.remove('dot-active'));
-    slides.forEach((item) => {
+    dots.forEach(item => item.classList.remove('dot-active'));
+    slides.forEach(item => {
       item.style.display = 'none'
       item.classList.remove('next-slide-in');
       item.classList.remove('next-slide-out');
@@ -32,17 +32,15 @@ const slider = (slide, pr, nt, sliderDots, dot) => {
     slides[slideIndex - 1].classList.add('next-slide-in');
     slides[slideFocus - 1].classList.add('next-slide-out');
     slides[slideIndex - 1].style.display = '';
-
   }
   showSlides(slideIndex, slideFocus);
 
-
-  const plusSlides = (n) => {
+  const plusSlides = n => {
     showSlides(slideFocus = slideIndex, slideIndex += n);
   }
 
-  const currentSlide = (n) => {
-    showSlides(slideIndex = n, slideFocus -= n); //, slideFocus += n);
+  const currentSlide = n => {
+    showSlides(slideFocus = slideIndex, slideIndex = n);
   }
 
   prev.addEventListener('click', () => {
@@ -52,7 +50,7 @@ const slider = (slide, pr, nt, sliderDots, dot) => {
     plusSlides(1);
   });
 
-  dotsWrap.addEventListener('click', (e) => {
+  dotsWrap.addEventListener('click', e => {
     for (let i = 0; i < dots.length + 1; i++) {
       if (e.target.classList.contains('dot') && e.target == dots[i - 1]) {
         currentSlide(i);
