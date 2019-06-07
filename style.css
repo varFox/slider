@@ -3,15 +3,16 @@
   position: relative;
 }
 .slider .wrap {
-  width: 100%;
+  width: 80%;
   position: relative;
-  height: 550px;
+  margin: 50px auto;
+  height: 500px;
   overflow: hidden;
 }
 .slider .wrap .slider-item {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 100%;
+  /* margin: 0 auto; */
+  /* margin-top: 50px; */
   position: absolute;
   right: 0;
   left: 0;
@@ -24,9 +25,9 @@
 .slider .wrap .prev {
   position: absolute;
   cursor: pointer;
-  top: 50px;
+  /* top: 50px; */
   width: 90px;
-  left: 10%;
+  /* left: 10%; */
   background-color: rgba(0, 0, 0, 0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -55,13 +56,13 @@
 .slider .wrap .next {
   position: absolute;
   cursor: pointer;
-  top: 50px;
+  /* top: 50px; */
   width: 90px;
   background-color: rgba(0, 0, 0, 0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   height: 100%;
-  right: 10%;
+  right: 0;
 }
 .slider .wrap .next:hover {
   background-color: rgba(0, 0, 0, 0.4);
@@ -111,24 +112,50 @@
   width: 18px;
 }
 .next-slide-in {
-  animation: next-slide-in 2.5s;
+  animation: next-slide-in 1.4s linear;
+  animation-fill-mode: forwards;
 }
 @keyframes next-slide-in {
   from {
-    left: 80%;
+    left: 100%;
   }
   to {
     left: 0;
   }
 }
 .next-slide-out {
-  animation: next-slide-out 2.5s;
+  animation: next-slide-out 1.4s linear;
+  animation-fill-mode: forwards;
 }
 @keyframes next-slide-out {
   from {
-    right: 0;
+    left: 0;
   }
   to {
-    right: 80%;
+    left: -100%;
+  }
+}
+.prev-slide-in {
+  animation: prev-slide-in 1.4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes prev-slide-in {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.prev-slide-out {
+  animation: prev-slide-out 1.4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes prev-slide-out {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }
