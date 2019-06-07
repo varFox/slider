@@ -45,7 +45,7 @@
   background: url(../icons/left-arrow.svg) center no-repeat;
   background-size: cover;
   position: absolute;
-  top: 42%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
@@ -76,7 +76,7 @@
   background: url(../icons/right-arrow.svg) center no-repeat;
   background-size: cover;
   position: absolute;
-  top: 42%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
