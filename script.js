@@ -70,3 +70,4 @@ const slider = (slide, pr, nt, sliderDots, dot) => {
 
 slider('.slider-item', '.prev', '.next', '.slider-dots', '.dot');
 // module.exports = slider;
+//////////////
